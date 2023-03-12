@@ -358,6 +358,7 @@ body {
 .customers.list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 
 .customers-item .icon {
@@ -366,21 +367,24 @@ body {
 }
 
 .customers-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
-  padding: 16px 31px;
+  width: 168px;
+  height: 88px;
 }
 
-.customers-item:hover,
-.customers-item:focus {
+
+.customers-item:is(:hover, focus) {
   border: 1px solid var(--pressed-state-color);
-  /* fill: var(--pressed-state-color); */
 }
 
-.customers-item .icon:hover,
-.customers-item .icon:focus {
+.customers-item:is(:hover, focus) .icon {
   fill: var(--pressed-state-color);
 }
+
 
 /* Footer --------------------------------------------------------*/
 .footer-section {
