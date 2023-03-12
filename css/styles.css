@@ -242,14 +242,15 @@ body {
 /* Section 1 ---------------------------------------------------------*/
 .advantages {
   display: flex;
+  gap: var(--card-gap);
 }
 
-.advantages>.item+.item {
+/* .advantages>.item+.item {
   margin-left: 24px;
-}
+} */
 
 .advantages>.item {
-  width: 264px;
+  width: calc(100% - 3 * var(--card-gap) / 4);
   /* outline: solid 1px forestgreen; */
 }
 
